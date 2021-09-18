@@ -15,26 +15,20 @@ const Layout = (props) => {
         <title>{title ? `${title}` : siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <header>
         <h1 className="site-title">
           <Link href="/">
             <a>{siteTitle}</a>
           </Link>
         </h1>
-        <Navbar />
       </header>
-
+      <Navbar />
       <main>
         {title ? <h1 className="page-title">{title}</h1> : ``}
         <div className="page-main">{children}</div>
       </main>
 
       <Footer author={AUTHOR} year={YEAR} />
-
-      <style jsx>{``}</style>
-
-      <style jsx global>{``}</style>
     </div>
   );
 };
